@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/xianlubird/mydocker/cgroups"
 	"github.com/xianlubird/mydocker/cgroups/subsystems"
 	"github.com/xianlubird/mydocker/container"

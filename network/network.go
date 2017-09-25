@@ -10,7 +10,7 @@ import (
 	"path"
 	"os"
 	"runtime"
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"encoding/json"
 	"path/filepath"
 	"strings"
