@@ -3,7 +3,7 @@ package container
 import (
 	"os"
 	"syscall"
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 )
 
 func RunContainerInitProcess(command string, args []string) error {
