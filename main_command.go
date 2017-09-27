@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	log "github.com/sirupsen/logrus"
+	log "github.com/Sirupsen/logrus"
 	"github.com/urfave/cli"
 	"github.com/xianlubird/mydocker/container"
 )
@@ -18,6 +18,7 @@ var runCommand = cli.Command{
 		},
 	},
 	Action: func(context *cli.Context) error {
+		log.Info("run come on")
 		if len(context.Args()) < 1 {
 			return fmt.Errorf("Missing container command")
 		}
@@ -32,9 +33,9 @@ var initCommand = cli.Command{
 	Name:  "init",
 	Usage: "Init container process run user's process in container. Do not call it outside",
 	Action: func(context *cli.Context) error {
-		log.Infof("init come on")
+		log.Info("init come on")
 		cmd := context.Args().Get(0)
-		log.Infof("command %s", cmd)
+		log.Info("command %s", cmd)
 		err := container.RunContainerInitProcess(cmd, nil)
 		return err
 	},

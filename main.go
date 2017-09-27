@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/sirupsen/logrus"
+	"github.com/Sirupsen/logrus"
 	"github.com/urfave/cli"
 	"os"
 	"path"
@@ -33,7 +33,7 @@ func (hook ContextHook) Fire(entry *logrus.Entry) error {
 	for i := 0; i < cnt; i++ {
 		fu := runtime.FuncForPC(pc[i] - 1)
 		name := fu.Name()
-		if !strings.Contains(name, "github.com/sirupsen/logrus") {
+		if !strings.Contains(name, "github.com/Sirupsen/logrus") {
 			file, line := fu.FileLine(pc[i] - 1)
 			entry.Data["file"] = path.Base(file)
 			entry.Data["func"] = path.Base(name)
